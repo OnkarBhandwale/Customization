@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{%  load static %}
+{% block 'main' %}
+<div class="container">
+<section id="Register">
+    <div class="contact-container container">
+        <div class="contact-img">
+            <img src="static/images/img/Register image.avif" alt="" />
+        </div>
+
+        
+
+        <div class="form-container mt-2">
+            <h2>Register Yourself</h2>
+            {% if errmsg %}
+            <div class="alert alert-warning" role="alert">
+                {{errmsg}}
+              </div>
+            {% endif %}
+
+            {% if success %}
+            <div class="alert alert-success" role="alert">
+                {{success}}
+            </div>
+            {% endif %}
+            
+            
+
+            <form method="POST">
+               {% csrf_token %} 
+            <h3>Email Address</h3>
+
+            <input type="email" class="form-control" id="input1" name="uname" placeholder="name@example.com" required />
+
+            <h3>Password</h3>
+            <input type="password" class="form-contorl" id="input2" name="upass" placeholder="Enter Your Password" />
+            <h3>Confirm Password</h3>
+            <input type="password" class="form-contorl" id="input2" name="ucpass" placeholder="Confirm Your Password" />
+            <div class="mb-3">
+                <input type="submit" value="Register" class="btn btn-secondary">
+                <b class="login">Already User?</b><a href="#login" style="text-decoration: none;" class="login">&nbsp;&nbsp; Login</a>
+            </div>
+        </div>
+        
+    </div>
+</section>
+
+
+
+
+</div>
+{% endblock 'main' %}

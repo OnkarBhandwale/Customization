@@ -1,39 +1,7 @@
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Custmize</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="style.css" />
-</head>
-
-<body>
-    <nav class="navbar">
-        <div class="navbar-container container">
-            <input type="checkbox" name="" id="">
-            <div class="hamburger-lines">
-                <span class="line line1"></span>
-                <span class="line line2"></span>
-                <span class="line line3"></span>
-            </div>
-            <ul class="menu-items">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#food">Services</a></li>
-                <li><a href="#food-menu">Products</a></li>
-                <li><a href="#testimonials">Our Customers</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-                
-            </ul>
-            <h1 class="logo"><img src="">Custmization.com</h1>
-            
-        </div>
-    </nav>
-    <section class="showcase-area" id="showcase">
+{% extends 'base.html' %}
+{%  load static %}
+{% block 'main' %}
+    <section class="showcase-area" id="showcase" style="background-image: url('static/images/bg/bg-2.jpg');">
         <div class="showcase-container">
             <h1 class="main-title" id="home">Custmize by Yourself</h1>
             <p>Service our Product Your</p>
@@ -47,15 +15,13 @@
                 <p class="small">About Us</p>
                 <h2>Welcome to Customization Services! We specialize in providing tailored solutions to meet your unique needs.</h2>
                 <p>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse ab
-                    eos omnis, nobis dignissimos perferendis et officia architecto,
-                    fugiat possimus eaque qui ullam excepturi suscipit aliquid optio,
-                    maiores praesentium soluta alias asperiores saepe commodi
-                    consequatur? Perferendis est placeat facere aspernatur!
+                    Give your customers a superior shopping experience. Realistic 3D product visuals, intuitive design tools and rewarding user journeys.
                 </p>
+               <a href="/register"> <button type="register" class="btn btn-primary">Start Creating</button> </a>
+
             </div>
             <div class="about-img">
-                <img src="images/bg/bg-customize.avif" alt="food" />
+                <img src="static\images\bg\bg-customize.avif" alt="food" />
             </div>
         </div>
     </section>
@@ -64,17 +30,17 @@
         <div class="food-container container">
             <div class="food-type fruite">
                 <div class="img-container">
-                    <img src="images/img/Custom-Laptop-1.webp" alt="error" />
+                    <img src="static/images/img/Custom-Laptop-1.webp" alt="error" />
                     <div class="img-content">
                         <h3>Design Your Laptop</h3>
-                        <a href="images/img/Hyderabad.jpg!w700wp" class="btn btn-primary" target="blank">learn
+                        <a href="static/images/img/Hyderabad.jpg!w700wp" class="btn btn-primary" target="blank">learn
                             more</a>
                     </div>
                 </div>
             </div>
             <div class="food-type vegetable">
                 <div class="img-container">
-                    <img src="images/img/custom-phone-1.webp" alt="error" />
+                    <img src="static/images/img/custom-phone-1.webp" alt="error" />
                     <div class="img-content">
                         <h3>Design Your Phone</h3>
                         <a href="https://en.wikipedia.org/wiki/Vegetable" class="btn btn-primary" target="blank">learn
@@ -84,7 +50,7 @@
             </div>
             <div class="food-type grin">
                 <div class="img-container">
-                    <img src="images/img/Custom-Bike-2.jpg" alt="error" />
+                    <img src="static/images/img/Custom-Bike-2.jpg" alt="error" />
                     <div class="img-content">
                         <h3>Design Your Bike</h3>
                         <a href="https://www.google.com/search?sca_esv=594855337&rlz=1C1RXQR_enIN1078IN1079&q=south+indian+breakfast&tbm=isch&source=lnms&sa=X&sqi=2&ved=2ahUKEwj4pqnt3LuDAxVfTGwGHeY7ClYQ0pQJegQICxAB&biw=1514&bih=707&dpr=1.25#imgrc=n__M4QVV9tahnM" class="btn btn-primary" target="blank">learn
@@ -99,10 +65,10 @@
         <div class="food-menu-container container">
             <div class="food-menu-item">
                 <div class="food-img">
-                    <img src="images/img/img-1.jpg" alt="" />
+                    <img src="static/images/img/Headset.jpg" alt="" />
                 </div>
                 <div class="food-description">
-                    <h2 class="food-titile">Biryani</h2>
+                    <h2 class="food-titile">Headset</h2>
                     <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Non,
                         quae.
@@ -117,11 +83,11 @@
 
             <div class="food-menu-item">
                 <div class="food-img">
-                    <img src="images/img/img-2.webp" alt="error" />
+                    <img src="static/images/img/cf58bd93-bd9e-4a6e-a177-5c685ba1ab03_Baseball-Caps.avif" alt="error" />
                 </div>
                 <div class="food-description">
-                    <h2 class="food-titile">PavBhaji</h2>
-                    <p>
+                    <h2 class="food-titile">Cap</h2>
+                    <p>    
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Non,
                         quae.
                     </p>
@@ -133,65 +99,65 @@
             </div>
             <div class="food-menu-item">
                 <div class="food-img">
-                    <img src="images/img/img-3.jpg" alt="" />
+                    <img src="static/images/img/0_X9mvddnn39EJqdPp.png" alt="" />
                 </div>
                 <div class="food-description">
-                    <h2 class="food-titile">Vadapav</h2>
+                    <h2 class="food-titile">Shoes</h2>
                     <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Non,
                         quae.
                     </p>
                     <p class="food-price">Price: &#8377; 25</p>
                     <button type="button" class="btn btn-primary">Order</button>
-                    <button type="button" class="btn btn-primary">Add to Cart</button>
+                   <!-- <button type="button" class="btn btn-primary">Add to Cart</button>-->
 
                 </div>
             </div>
             <div class="food-menu-item">
                 <div class="food-img">
-                    <img src="images/img/img-6.webp" alt="" />
+                    <img src="static/images/img/istockphoto-955641488-612x612.jpg" alt="" />
                 </div>
                 <div class="food-description">
-                    <h2 class="food-titile">Tava Pulav</h2>
+                    <h2 class="food-titile">Clothes</h2>
                     <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Non,
                         quae.
                     </p>
                     <p class="food-price">Price: &#8377; 70</p>
-                    <button type="button" class="btn btn-primary">Order</button>
-                    <button type="button" class="btn btn-primary">Add to Cart</button>
+                    <button type="button" class="btn btn-primary">Design</button>
+                    <!--<button type="button" class="btn btn-primary">Add to Cart</button>-->
 
                 </div>
             </div>
             <div class="food-menu-item">
                 <div class="food-img">
-                    <img src="images/img/img-7.webp" alt="" />
+                    <img src="static/images/img/WaterBottle.jpg" alt="" />
                 </div>
                 <div class="food-description">
-                    <h2 class="food-titile">Puri Bhaji</h2>
+                    <h2 class="food-titile">Bottle</h2>
                     <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Non,
                         quae.
                     </p>
                     <p class="food-price">Price: &#8377; 90</p>
-                    <button type="button" class="btn btn-primary">Order</button>
-                    <button type="button" class="btn btn-primary">Add to Cart</button>
+                    <button type="button" class="btn btn-primary">Design</button>
+                    <button type="button" class="btn btn-primary">Buy</button>
 
                 </div>
             </div>
             <div class="food-menu-item">
                 <div class="food-img">
-                    <img src="images/img/img-8.webp" alt="" />
+                    <img src="static/images/img/Joggers.avif" alt="" />
                 </div>
                 <div class="food-description">
-                    <h2 class="food-titile">PaniPuri</h2>
+                    <h2 class="food-titile">Joggers</h2>
                     <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Non,
                         quae.
                     </p>
                     <p class="food-price">Price: &#8377; 30</p>
-                    <button type="button" class="btn btn-primary">Order</button>
-                    <button type="button" class="btn btn-primary">Add to Cart</button>
+                    <button type="button" class="btn btn-primary">Design</button>
+                    <button type="button" class="btn btn-primary">Buy</button>
 
                 </div>
             </div>
@@ -203,7 +169,7 @@
             <div class="testimonial-box">
                 <div class="customer-detail">
                     <div class="customer-photo">
-                        <img src="images/review/img-1.jpg" alt="" />
+                        <img src="static/images/review/img-1.jpg" alt="" />
                         <p class="customer-name">Iron Man</p>
                     </div>
                 </div>
@@ -223,7 +189,7 @@
             <div class="testimonial-box">
                 <div class="customer-detail">
                     <div class="customer-photo">
-                        <img src="images/review/img-2.webp" alt="" />
+                        <img src="static/images/review/img-2.webp" alt="" />
                         <p class="customer-name">Mark Zuckerberg</p>
                     </div>
                 </div>
@@ -262,31 +228,6 @@
             </div>
         </div>
     </section>
-    <section id="contact">
-        <div class="contact-container container">
-            <div class="contact-img">
-                <img src="https://i.postimg.cc/1XvYM67V/restraunt2.jpg" alt="" />
-            </div>
-
-            <div class="form-container">
-                <h2>Register</h2>
-                <input type="email" class="form-contorl" id="input1" name="uname" placeholder="name@example.com" />
-                <input type="password" class="form-contorl" id="input2" name="upass" placeholder="Enter Your Password" />
-                <input type="password" class="form-contorl" id="input3" name="ucpass">
-            </div>
-            
-        </div>
-    </section>
-    <footer id="footer">
-        <h2>Restraunt &copy; all rights reserved</h2>
-    </footer>
-    <!-- .................../ JS Code for smooth scrolling /...................... -->
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="app.js"></script>
-
-</html>
-
-</body>
-
-</html>
+    
+    
+    {% endblock 'main' %}
