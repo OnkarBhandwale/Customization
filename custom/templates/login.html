@@ -1,5 +1,5 @@
-{% extends 'base.html' %}
-{%  load static %}
+{% include 'header.html' %}
+{% load static %}
 {% block 'main' %}
 
 
@@ -10,7 +10,7 @@
         </div>
 
         <div class="form-container">
-            <h2>Designer Login</h2>
+            
             {% if errmsg %}
             <div class="alert alert-danger" role="alert">
                 {{ errmsg }}

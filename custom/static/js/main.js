@@ -24,3 +24,26 @@ $(document).ready(function () {
         } // End if
     });
 });
+document.getElementById("verifyEmailBtn").addEventListener("click", function() {
+    // Send a request to the backend to initiate email verification
+    fetch('/verify_email/', {
+        method: 'POST',  // Or 'GET' depending on your backend implementation
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            // Include any necessary data in the request body
+        })
+    })
+    .then(response => {
+        if (response.ok) {
+            alert("Verification email sent successfully!");
+        } else {
+            alert("Failed to send verification email. Please try again later.");
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert("An error occurred while sending the verification email.");
+    });
+});
